@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../public/fonts/helvetica-neu.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('../public/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../public/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+
+.slide-in {
+  max-height: 1000px; /* Büyük bir değer vererek öğenin tamamen görünmesini sağlarız */
+  opacity: 1;
+  transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.slide-out {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.textAnimate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  font-size: 96px;
+  font-family: 'La Belle Aurore', cursive;
+  min-width: 10px;
+
+  &:hover {
+    color: #ffd700;
+  }
+}
+
+.textAnimateHover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+  font-size: 96px;
+  font-family: 'La Belle Aurore', cursive;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #ffd700;
+  }
+}
+
+.main {
+  background-color: turquoise;
+  height: 2700px;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+//Clouds
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100vw); }
+}
+
+@keyframes moveDiagonal {
+  0% { 
+    transform: translate(0, 0); 
+    opacity: 0;  /* İlk başta öğenin görünmez olmasını sağlar */
+  }
+  20% {
+    opacity: 1;  /* Animasyonun %20'sinde öğenin tamamen görünür olmasını sağlar */
+  }
+  100% { 
+    transform: translate(-100vw, -200vh); 
+    opacity: 1;  /* Animasyonun sonunda öğenin görünür olmasını sağlar */
+  }
+}
+
+.clouds {
+  animation: moveDiagonal 15s linear infinite;
+  overflow: hidden;
+  
+}
+
+.clouds-2 {
+  animation: moveDiagonal 15s linear infinite;
+  overflow: hidden;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+  
+
+}
+
+.clouds-4 {
+  animation: moveDiagonal 15s linear infinite;
+  overflow: hidden;
+  animation-delay: 6s;
+  animation-fill-mode: backwards;
+  
+
+}
+
+.clouds-6 {
+  animation: moveDiagonal 15s linear infinite;
+  overflow: hidden;
+  animation-delay: 9s;
+  animation-fill-mode: backwards;
+  
+
+}
+
+
+.cloud1 {
+  left: 0%;
+  animation: moveClouds 20s linear infinite; 
+  overflow: hidden;
+}
+
+.cloud2 {
+  left: 50%;
+  animation: moveClouds 20s linear infinite;
+  animation-delay: 2s;
+  overflow: hidden;
+}
+
+.flip-vertical {
+  transform: scaleY(-1);
+  
+}
+
+
+
+
+
