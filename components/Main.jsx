@@ -17,7 +17,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="bg-turquoise h-[1200px] flex justify-center relative overflow-hidden">
+    <div id='home' className="bg-turquoise h-[1200px] flex justify-center relative overflow-hidden">
       <div className="absolute left-0 bottom-0 clouds">
         <Image src="/images/cloud1.png" alt="cloud1" width={400} height={300} />
         <Image
@@ -72,13 +72,16 @@ export default function Main() {
         </div>
 
         <h2
-          className="font-serif text-4xl mt-10 "
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-delay="1000"
-        >
-          MINT YOU ZOKU.TAKE A SIDE
-        </h2>
+  className="
+    text-3xl md:text-5xl
+    font-serif mt-10
+    animate__animated animate__fadeInUp"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+  data-aos-delay="1000"
+>
+  MINT YOU ZOKU.TAKE A SIDE
+</h2>
       </div>
     </div>
   );
