@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+//Yıldız değiştirelecek.Resmin alttan taşan kısmı gizlenecek.
+
 const Contact = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
