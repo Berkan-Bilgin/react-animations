@@ -19,7 +19,7 @@ const Contact = ({ images }) => {
   const currentImage = images[currentImageIndex];
 
   return (
-    <div className="w-full h-screen bg-center bg-no-repeat bg-contain flex items-start justify-center" 
+    <div id="contact" className="w-full h-screen bg-center bg-no-repeat bg-contain flex items-start justify-center" 
     style={{ backgroundImage: `url('https://chainzoku.io/_nuxt/image/fa5785.webp')` }}
     >
    <div className="mt-20">

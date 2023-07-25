@@ -39,28 +39,28 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
+    <nav id="nav"
       className={`
     p-4 sticky top-0 z-10
     transition-colors duration-700
      ${isScrolled || isMobile ? "bg-primary" : "bg-turquoise"}`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-xl">Logo</div>
+        <div className="text-xl"><Link href='/'> LOGO</Link></div>
         <div className="hidden md:flex space-x-4">
-          <Link href='/' className="" smooth={true}>
+          <Link href='/' className=""  >
             Home
           </Link>
-          <Link href='/#about' className="" smooth={true}>
+          <Link href='/#about' className="">
             About
           </Link>
 
-          <a href="/#services" className="">
+          <Link href="/#services" className="">
             Services
-          </a>
-          <a href="#" className="">
+          </Link>
+          <Link href="/#contact" className="">
             Contact
-          </a>
+          </Link>
         </div>
         <div className="md:hidden">
           <button
