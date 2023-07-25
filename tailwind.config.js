@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         turquoise: '#40E0D0',
-        primary: '#FFD700'
+        primary: '#FFD700',
+        secondary: '#CDFB52'
       }
     },
   },
