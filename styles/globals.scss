@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
 @font-face {
   font-family: 'Helvetica Neue';
   src: url('../public/fonts/helvetica-neu.ttf') format('ttf');
@@ -15,6 +20,21 @@
 @font-face {
   font-family: 'Coolvetica';
   src: url('../public/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+.font-laBelleAuro{
+  font-family: 'La Belle Aurore', cursive;
+
+}
+
+.font-Coolverica{
+  font-family: 'Coolvetica', cursive;
+
+}
+
+.font-Helvetica{
+  font-family: 'Helvetica Neue';
+
 }
 
 
@@ -138,7 +158,27 @@
   
 }
 
+.animatedBox {
+  width: 65%;
+  top: 100px;
+  height: 400px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
 
+.animatedBox::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 50%;
+  background: #CDFB52;
+}
 
+.run-animation::after {
+  animation: slide 3s forwards;
+}
 
-
+@keyframes slide {
+  0% { left: 45%; }
+  100% { left: 61%; }
+}
