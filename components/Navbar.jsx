@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
-import { Link, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,29 +43,29 @@ const Navbar = () => {
       className={`
     p-4 sticky top-0 z-10
     transition-colors duration-700
-     ${isScrolled || isMobile ? "bg-gray-500" : "bg-turquoise"}`}
+     ${isScrolled || isMobile ? "bg-primary" : "bg-turquoise"}`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-xl">Logo</div>
+        <div className="text-xl">Logo</div>
         <div className="hidden md:flex space-x-4">
-          <Link href="#anasayfa" className="text-white" smooth={true}>
-            Ana Sayfa12
+          <Link href='/' className="" smooth={true}>
+            Home
           </Link>
-          <Link href="#hakkinda" className="text-white" smooth={true}>
-            Hakkında
+          <Link href='/#about' className="" smooth={true}>
+            About
           </Link>
 
-          <a href="#" className="text-white">
-            Hizmetler
+          <a href="/#services" className="">
+            Services
           </a>
-          <a href="#" className="text-white">
-            İletişim
+          <a href="#" className="">
+            Contact
           </a>
         </div>
         <div className="md:hidden">
           <button
             onClick={handleMobileMenuToggle}
-            className="text-white focus:outline-none"
+            className=" focus:outline-none"
           >
             <HiMenu className="w-6 h-6" />
           </button>
@@ -77,16 +77,16 @@ const Navbar = () => {
           isMobileMenuOpen ? "slide-in" : "slide-out"
         } md:hidden bg-gray-500 py-2`}
       >
-        <a href="#" className="block text-white px-4 py-2">
+        <a href="#" className="block  px-4 py-2">
           Ana Sayfa
         </a>
-        <a href="#" className="block text-white px-4 py-2">
+        <a href="#" className="block  px-4 py-2">
           Hakkında
         </a>
-        <a href="#" className="block text-white px-4 py-2">
+        <a href="#" className="block  px-4 py-2">
           Hizmetler
         </a>
-        <a href="#" className="block text-white px-4 py-2">
+        <a href="#" className="block  px-4 py-2">
           İletişim
         </a>
       </div>
